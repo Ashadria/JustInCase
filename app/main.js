@@ -55,10 +55,7 @@ JustInCase.app = M.Application.design({
     entryPage : 'initial',
 
     initial: JustInCase.InitialDashboard,
-    familyDoctor: JustInCase.FamilyDoctorPage,
-    emergencyMedicine: JustInCase.EmergencyMedicine,
-    pediatrics: JustInCase.Pediatrics,
-    chiropractic: JustInCase.Chiropractic,
-    other: JustInCase.Other,
+    doctorListPage: JustInCase.DoctorListPage,
+    other: JustInCase.OtherPage,
     map: JustInCase.MapPage
 });

@@ -1,11 +1,11 @@
-m_require('app/views/FamilyDoctorPageTemplate.js');
-JustInCase.FamilyDoctorPage = M.PageView.design({
+m_require('app/views/DoctorListPageTemplate.js');
+JustInCase.DoctorListPage = M.PageView.design({
 
 	childViews: 'header content',
 
 	events: {
         pageshow: {
-            target: JustInCase.FamilyDoctorController,
+            target: JustInCase.DoctorListPageController,
             action: 'init'
         }
     },
@@ -17,9 +17,9 @@ JustInCase.FamilyDoctorPage = M.PageView.design({
 
     content: M.PaginationView.design({
 
-    	listItemTemplateView: JustInCase.FamilyDoctorListTemplate,
+    	listItemTemplateView: JustInCase.DoctorListPageTemplate,
     	contentBinding: {
-            target: JustInCase.FamilyDoctorController,
+            target: JustInCase.DoctorListPageController,
             property: 'list'
         },
         itemsPerPage: 10,

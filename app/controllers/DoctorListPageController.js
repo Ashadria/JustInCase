@@ -1,8 +1,8 @@
-JustInCase.FamilyDoctorController = M.Controller.extend({
+JustInCase.DoctorListPageController = M.Controller.extend({
 
 	list: '',
 
-	init: function(isFirstLoad) {
+	init: function() {
 	       this.set('list',
 	    		   [
 	    		    {

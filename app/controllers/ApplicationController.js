@@ -6,7 +6,7 @@ JustInCase.ApplicationController = M.Controller.extend({
 
     init: function() {
         var items = [{
-            icon: 'theme/images/icon_settings.png',
+            icon: 'theme/images/family.png',
             label: 'Family',
             value: 'family',
             events: {
@@ -17,7 +17,7 @@ JustInCase.ApplicationController = M.Controller.extend({
             }
         },
         {
-            icon: 'theme/images/icon_edit.png',
+            icon: 'theme/images/emergency.png',
             label: 'Emergency',
             value: 'emergency',
             events: {
@@ -28,7 +28,7 @@ JustInCase.ApplicationController = M.Controller.extend({
             }
         },
         {
-            icon: 'theme/images/icon_wifi.png',
+            icon: 'theme/images/pediatrics.png',
             label: 'Pediatrics',
             value: 'pediatrics',
             events: {
@@ -39,7 +39,7 @@ JustInCase.ApplicationController = M.Controller.extend({
             }
         },
             {
-            icon: 'theme/images/icon_clock.png',
+            icon: 'theme/images/chriropractic.png',
             label: 'Chiropractic',
             value: 'chiropractic',
             events: {
@@ -50,9 +50,9 @@ JustInCase.ApplicationController = M.Controller.extend({
             }
         },
         {
-            icon: 'theme/images/icon_home.png',
-            label: 'Other',
-            value: 'other',
+            icon: 'theme/images/mental.png',
+            label: 'Mental Health',
+            value: 'mental',
             events: {
                 tap: {
                     target: this,

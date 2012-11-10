@@ -4,17 +4,13 @@ JustInCase.MapController = M.Controller.extend({
 
     textFieldValue: null,
 
-    init: function(isFirstTime) {
-
-        if(isFirstTime) {
-
+    init: function() {
             var map = M.ViewManager.getView('map', 'map');
             map.initMap({
                 callbacks: {
                     success: {
                         target: this,
                         action: function() {
-                        	debugger;
                             /* google namespace is loaded, so use places now */
                             var service = new google.maps.places.PlacesService(map.map);
                             var request = {
@@ -24,12 +20,11 @@ JustInCase.MapController = M.Controller.extend({
                             };
 
                             service.search(request, function(results, status) {
-                            	debugger;
                                 console.log('STATUS: ' + status);
                                 console.log('RESULTS: ' + results);
 
+                                debugger;
                                 JustInCase.MapController.findDoctorLocation();
-                                //Find user's location
                                 JustInCase.MapController.findUserLocation();
 
                             });
@@ -43,11 +38,9 @@ JustInCase.MapController = M.Controller.extend({
                     }
                 }
             });
-        }
     },
 
     findDoctorLocation: function() {
-    	debugger;
     	var map = M.ViewManager.getView('map', 'map');
 
         //Get doctors location
@@ -56,14 +49,13 @@ JustInCase.MapController = M.Controller.extend({
             markerAnimationType: M.MAP_MARKER_ANIMATION_DROP,
             showAnnotationOnClick: YES,
             map: map,
-            title: 'Doctor Name',
-            message: 'This is the address where the doctor works.'
+            title: '' + doctorName,
+            message: '' + doctorAddress
         });
         map.addMarker(doctorMarker);
     },
 
     findUserLocation: function() {
-    	debugger;
         M.LoaderView.show('Looking for you ...');
 
         M.LocationManager.getLocation(this, this.onSuccess, this.onError, {
@@ -74,7 +66,6 @@ JustInCase.MapController = M.Controller.extend({
     },
 
     onSuccess: function(location) {
-    	debugger;
         M.LoaderView.hide();
 
         var map = M.ViewManager.getView('map', 'map');
@@ -93,7 +84,6 @@ JustInCase.MapController = M.Controller.extend({
     },
 
     onError: function(error) {
-    	debugger;
         M.LoaderView.hide();
 
         M.DialogView.alert({

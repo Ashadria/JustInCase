@@ -17,8 +17,17 @@ JustInCase.InitialDashboard = M.PageView.design({
     },
 
     header: M.ToolbarView.design({
-        value: 'JUST IN CASE',
-        cssClass: 'myHeader'
+
+    	childViews: 'image',
+
+    	image: M.ImageView.design({
+
+            anchorLocation: M.CENTER,
+
+            value: 'theme/images/banner.png'
+
+        }),
+        value: ''
     }),
 
     content: M.ScrollView.design({

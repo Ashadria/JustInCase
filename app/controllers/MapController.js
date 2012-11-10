@@ -14,6 +14,7 @@ JustInCase.MapController = M.Controller.extend({
                     success: {
                         target: this,
                         action: function() {
+                        	debugger;
                             /* google namespace is loaded, so use places now */
                             var service = new google.maps.places.PlacesService(map.map);
                             var request = {
@@ -23,6 +24,7 @@ JustInCase.MapController = M.Controller.extend({
                             };
 
                             service.search(request, function(results, status) {
+                            	debugger;
                                 console.log('STATUS: ' + status);
                                 console.log('RESULTS: ' + results);
 

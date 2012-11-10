@@ -12,16 +12,24 @@ JustInCase.DoctorListPageController = M.Controller.extend({
 	       this.set('list', providers);
 	},
 
+	initPediatrics: function() {
+		   var providers = this.getProviders(zipcode, specialties[2]);
+	       this.set('list', providers);
+	},
+
+	initChiropractic: function() {
+		   var providers = this.getProviders(zipcode, specialties[3]);
+	       this.set('list', providers);
+	},
+
 	getProviders : function(zipcode, specialty){
 		//Make request for Family Medicine Doctors
 		return [
 		        {
-		        	image: 'icon_clock.png',
 		        	name: 'Dr Smith ' + specialty,
 		        	address: '2301 East Lamar Blvd. Suite 140. City, Arlington'
 		        },
 		        {
-		        	image: 'icon_clock.png',
 		        	name: 'Dr Brown ' + specialty,
 		        	address: '2301 East Lamar Blvd. Suite 140. City, Arlington'
 		        }

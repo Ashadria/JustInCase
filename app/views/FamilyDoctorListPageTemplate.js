@@ -4,18 +4,13 @@ JustInCase.FamilyDoctorListPageTemplate = M.ListItemView.design({
 
 	events: {
         tap: {
-            target: JustInCase.FamilyDoctorListPageController,
+            target: JustInCase.DoctorListPageController,
             action:'listObjectClicked'
         }
     },
 
     image: M.ImageView.design({
-        computedValue: {
-            valuePattern: '<%= image %>',
-            operation: function(v) {
-                return 'theme/images/' + v;
-            }
-        }
+    	value: 'theme/images/map.png'
     }),
 
     name: M.LabelView.design({

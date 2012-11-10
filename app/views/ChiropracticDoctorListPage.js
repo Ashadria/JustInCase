@@ -1,17 +1,17 @@
 m_require('app/views/FamilyDoctorListPageTemplate.js');
-JustInCase.EmergencyDoctorListPage = M.PageView.design({
+JustInCase.ChiropracticDoctorListPage = M.PageView.design({
 
 	childViews: 'header content',
 
 	events: {
         pageshow: {
             target: JustInCase.DoctorListPageController,
-            action: 'initEmergency'
+            action: 'initChiropractic'
         }
     },
 
     header: M.ToolbarView.design({
-        value: 'Emergency Medicine',
+        value: 'Chiropractic Medicine',
         showBackButton: YES
     }),
 

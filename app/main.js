@@ -1,27 +1,8 @@
-// ==========================================================================
-// The M-Project - Mobile HTML5 Application Framework
-// Generated with: Espresso
-//
-// Project: JustInCase
-// ==========================================================================
-
 var JustInCase  = JustInCase || {};
 
 
-JustInCase.app = M.Application.design({
 
-    /* Define the entry/start page of your app. This property must be provided! */
-	entryPage : 'initial',
-
-    initial: DashboardSample.InitialDashboard,
-    familyDoctor: DashboardSample.FamilyDoctorPage,
-    emergencyMedicine: DashboardSample.EmergencyMedicine,
-    pediatrics: DashboardSample.Pediatrics,
-    chiropractic: DashboardSample.Chiropractic,
-    other: DashboardSample.Other,
-    map: DashboardSample.MapPage
-});
-
+/* Page 1 */
 JustInCase.InitialDashboard = M.PageView.design({
 
     childViews: 'header  content',
@@ -68,4 +49,16 @@ JustInCase.InitialDashboard = M.PageView.design({
     })
 });
 
+JustInCase.app = M.Application.design({
+
+    /* Define the entry/start page of your app. This property must be provided! */
+    entryPage : 'initial',
+
+    initial: JustInCase.InitialDashboard,
+    familyDoctor: JustInCase.FamilyDoctorPage,
+    emergencyMedicine: JustInCase.EmergencyMedicine,
+    pediatrics: JustInCase.Pediatrics,
+    chiropractic: JustInCase.Chiropractic,
+    other: JustInCase.Other,
+    map: JustInCase.MapPage
 });

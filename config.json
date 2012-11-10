@@ -31,5 +31,8 @@
         "timeStampCreated": "created_at",
         "timeStampUpdated": "updated_at",
         "m_id": "m_id"
-    }
+    },
+    "libraries":[
+    	{"name": "pagination", "refs": ["*"]}
+    ]
 }

@@ -1,6 +1,6 @@
 // ==========================================================================
 // The M-Project - Mobile HTML5 Application Framework
-// Generated with: Espresso 
+// Generated with: Espresso
 //
 // Project: JustInCase
 // ==========================================================================
@@ -11,29 +11,61 @@ var JustInCase  = JustInCase || {};
 JustInCase.app = M.Application.design({
 
     /* Define the entry/start page of your app. This property must be provided! */
-    entryPage : 'page1',
+	entryPage : 'initial',
 
-    page1: M.PageView.design({
+    initial: DashboardSample.InitialDashboard,
+    familyDoctor: DashboardSample.FamilyDoctorPage,
+    emergencyMedicine: DashboardSample.EmergencyMedicine,
+    pediatrics: DashboardSample.Pediatrics,
+    chiropractic: DashboardSample.Chiropractic,
+    other: DashboardSample.Other,
+    map: DashboardSample.MapPage
+});
 
-        childViews: 'header content footer',
+JustInCase.InitialDashboard = M.PageView.design({
 
-        header: M.ToolbarView.design({
-            value: 'HEADER',
-            anchorLocation: M.TOP
-        }),
+    childViews: 'header  content',
 
-        content: M.ScrollView.design({
-            childViews: 'label',
-            label: M.LabelView.design({
-                value: 'Welcome to The M-Project'
-            })
-        }),
+    events: {
+        pageshow: {
+            target: JustInCase.ApplicationController,
+            action: 'init'
+        }
+    },
 
-        footer: M.ToolbarView.design({
-            value: 'FOOTER',
-            anchorLocation: M.BOTTOM
+    header: M.ToolbarView.design({
+        value: 'Just in Case'
+    }),
+
+    content: M.ScrollView.design({
+        childViews: 'dashboard',
+
+//        background: M.ImageView.design({
+//            value: 'theme/images/dashboardBackground.jpg',
+//            cssClass: 'myBackground'
+//        }),
+
+        dashboard: M.DashboardView.design({
+
+            events: {
+                tap: {
+                    target: JustInCase.ApplicationController,
+                    action: function(id) {
+                        this.events.unshift({
+                            label: (this.events.length + 1) + ') ' + M.ViewManager.getViewById(id).label + ' (global)'
+                        });
+                        this.set('events', this.events);
+                    }
+                }
+            },
+            itemsPerLine: 2,
+            isEditable: NO,
+            contentBinding: {
+                target: JustInCase.ApplicationController,
+                property: 'items'
+            }
         })
-    
     })
+});
 
 });

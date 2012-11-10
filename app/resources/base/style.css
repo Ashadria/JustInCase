@@ -1,4 +1,14 @@
-/* Put you custom stylings here! */
 .myCssClass {
     color: #FF0000;
+}
+
+.address {
+    font-size: 14px;
+    font-weight: normal;
+    white-space: normal;
+}
+
+.map {
+    width: 100%;
+    height: 500px;
 }

@@ -1,13 +1,13 @@
 var JustInCase  = JustInCase || {};
 
-var zipcode = 0;
-var doctorType = 'bla';
+zipcode = 0;
+specialties = ["Family Medicine","Emergency Medicine", "Pediatrics", "Chiropractic Medicine"];
 
 
 /* Page 1 */
 JustInCase.InitialDashboard = M.PageView.design({
 
-    childViews: 'header  content',
+    childViews: 'header content',
 
     events: {
         pageshow: {

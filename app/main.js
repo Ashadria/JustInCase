@@ -1,5 +1,7 @@
 var JustInCase  = JustInCase || {};
 
+var zipcode = 0;
+var doctorType = 'bla';
 
 
 /* Page 1 */
@@ -20,11 +22,6 @@ JustInCase.InitialDashboard = M.PageView.design({
 
     content: M.ScrollView.design({
         childViews: 'dashboard',
-
-//        background: M.ImageView.design({
-//            value: 'theme/images/dashboardBackground.jpg',
-//            cssClass: 'myBackground'
-//        }),
 
         dashboard: M.DashboardView.design({
 
@@ -55,7 +52,10 @@ JustInCase.app = M.Application.design({
     entryPage : 'initial',
 
     initial: JustInCase.InitialDashboard,
-    doctorListPage: JustInCase.DoctorListPage,
+    familyDoctorListPage: JustInCase.FamilyDoctorListPage,
+    emergencyDoctorListPage: JustInCase.EmergencyDoctorListPage,
+    pediatricsDoctorListPage: JustInCase.PediatricsDoctorListPage,
+    chiropracticDoctorListPage: JustInCase.ChiropracticDoctorListPage,
     other: JustInCase.OtherPage,
     map: JustInCase.MapPage
 });

@@ -1,10 +1,10 @@
-JustInCase.DoctorListPageTemplate = M.ListItemView.design({
+JustInCase.FamilyDoctorListPageTemplate = M.ListItemView.design({
 
 	childViews: 'image name address',
 
 	events: {
         tap: {
-            target: JustInCase.DoctorListPageController,
+            target: JustInCase.FamilyDoctorListPageController,
             action:'listObjectClicked'
         }
     },

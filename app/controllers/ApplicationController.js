@@ -12,7 +12,7 @@ JustInCase.ApplicationController = M.Controller.extend({
             events: {
                 tap: {
                     target: this,
-                    action: 'goToDoctorListPage'
+                    action: 'goToFamilyDoctorListPage'
                 }
             }
         },
@@ -23,7 +23,7 @@ JustInCase.ApplicationController = M.Controller.extend({
             events: {
                 tap: {
                     target: this,
-                    action: 'goToDoctorListPage'
+                    action: 'goToEmergencyDoctorListPage'
                 }
             }
         },
@@ -34,7 +34,7 @@ JustInCase.ApplicationController = M.Controller.extend({
             events: {
                 tap: {
                     target: this,
-                    action: 'goToDoctorListPage'
+                    action: 'goToPediatricsDoctorListPage'
                 }
             }
         },
@@ -45,7 +45,7 @@ JustInCase.ApplicationController = M.Controller.extend({
             events: {
                 tap: {
                     target: this,
-                    action: 'goToDoctorListPage'
+                    action: 'goToChiropracticDoctorListPage'
                 }
             }
         },
@@ -64,8 +64,22 @@ JustInCase.ApplicationController = M.Controller.extend({
         this.set('items', items);
     },
 
-    goToDoctorListPage: function() {
-    	this.switchToPage('doctorListPage', M.TRANSITION.SLIDE);
+    
+
+    goToFamilyDoctorListPage: function() {
+    	this.switchToPage('familyDoctorListPage', M.TRANSITION.SLIDE);
+    },
+
+    goToEmergencyDoctorListPage: function() {
+    	this.switchToPage('emergencyDoctorListPage', M.TRANSITION.SLIDE);
+    },
+
+    goToPediatricsDoctorListPage: function() {
+    	this.switchToPage('pediatricsDoctorListPage', M.TRANSITION.SLIDE);
+    },
+
+    goToChiropracticDoctorListPage: function() {
+    	this.switchToPage('chiropracticDoctorListPage', M.TRANSITION.SLIDE);
     },
 
     goToOtherPage: function () {

@@ -51,8 +51,8 @@ JustInCase.ApplicationController = M.Controller.extend({
         },
         {
             icon: 'theme/images/mental.png',
-            label: 'Mental Health',
-            value: 'mental',
+            label: 'Other',
+            value: 'other',
             events: {
                 tap: {
                     target: this,
@@ -64,7 +64,7 @@ JustInCase.ApplicationController = M.Controller.extend({
         this.set('items', items);
     },
 
-    
+
 
     goToFamilyDoctorListPage: function() {
     	this.switchToPage('familyDoctorListPage', M.TRANSITION.SLIDE);

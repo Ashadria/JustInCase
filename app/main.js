@@ -17,7 +17,8 @@ JustInCase.InitialDashboard = M.PageView.design({
     },
 
     header: M.ToolbarView.design({
-        value: 'Just in Case'
+        value: 'JUST IN CASE',
+        cssClass: 'myHeader'
     }),
 
     content: M.ScrollView.design({

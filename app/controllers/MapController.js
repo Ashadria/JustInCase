@@ -16,10 +16,9 @@ JustInCase.MapController = M.Controller.extend({
                             var service = new google.maps.places.PlacesService(map.map);
                             var request = {
                                 location: new google.maps.LatLng(39.114171, -94.627457),
-                                radius: '20',
+                                radius: '100',
                                 types: ['store']
                             };
-
                             service.search(request, function(results, status) {
                                 console.log('STATUS: ' + status);
                                 console.log('RESULTS: ' + results);
@@ -41,7 +40,6 @@ JustInCase.MapController = M.Controller.extend({
         } else {
         	M.ViewManager.getView('map', 'map').updateMap({
                 initialLocation: M.Location.init(39.114171, -94.627457),
-                zoomLevel: 15,
                 setMarkerAtInitialLocation: NO
             });
         	JustInCase.MapController.findDoctorLocation();

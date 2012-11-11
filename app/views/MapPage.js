@@ -22,7 +22,7 @@ JustInCase.MapPage = M.PageView.design({
             showStreetViewControl: NO,
             showNavigationControl: YES,
             mapType: M.MAP_ROADMAP,
-            zoomLevel: 15,
+            zoomLevel: 11,
             isDraggable: YES,
 
             initialLocation: M.Location.extend({

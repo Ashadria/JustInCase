@@ -31,13 +31,12 @@ JustInCase.DoctorListPageController = M.Controller.extend({
 		        },
 		        {
 		        	name: 'Dr Brown ',
-		        	address: '2301 East Lamar Blvd. Suite 140. City, Arlington'
+		        	address: '5000 Clinton Parkway Lawrence, Kansas'
 		        }
 	    ];
 	},
 
 	listObjectClicked : function(id, nameId){
-		debugger;
 		//Parse Out the Address
 		var initialElementString = window.document.getElementById(id).innerHTML;
 		var beginOfAddressElement = initialElementString.search("address");

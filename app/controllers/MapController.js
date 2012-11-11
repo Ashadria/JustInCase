@@ -4,7 +4,8 @@ JustInCase.MapController = M.Controller.extend({
 
     textFieldValue: null,
 
-    init: function() {
+    createMap: function(isFirstTime) {
+        if(isFirstTime) {
             var map = M.ViewManager.getView('map', 'map');
             map.initMap({
                 callbacks: {
@@ -23,7 +24,6 @@ JustInCase.MapController = M.Controller.extend({
                                 console.log('STATUS: ' + status);
                                 console.log('RESULTS: ' + results);
 
-                                debugger;
                                 JustInCase.MapController.findDoctorLocation();
                                 JustInCase.MapController.findUserLocation();
 
@@ -38,6 +38,15 @@ JustInCase.MapController = M.Controller.extend({
                     }
                 }
             });
+        } else {
+        	M.ViewManager.getView('map', 'map').updateMap({
+                initialLocation: M.Location.init(39.073791, -95.471191),
+                zoomLevel: 10,
+                setMarkerAtInitialLocation: NO
+            });
+        	JustInCase.MapController.findDoctorLocation();
+            JustInCase.MapController.findUserLocation();
+        }
     },
 
     findDoctorLocation: function() {
@@ -76,7 +85,7 @@ JustInCase.MapController = M.Controller.extend({
             showAnnotationOnClick: YES,
             map: map,
             title: 'User',
-            message: 'This is the address where you currently are.'
+            message: 'This is where you currently are.'
         });
 
         map.addMarker(userMarker);

@@ -3,7 +3,7 @@ JustInCase.MapPage = M.PageView.design({
 	events: {
         pageshow: {
             target: JustInCase.MapController,
-            action: 'init'
+            action: 'createMap'
         }
     },
 

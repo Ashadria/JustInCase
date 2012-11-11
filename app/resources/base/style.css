@@ -12,3 +12,7 @@
 .ui-content {
 	padding-top:70px;
 }
+
+.ui-title {
+	min-width: 400px;
+}

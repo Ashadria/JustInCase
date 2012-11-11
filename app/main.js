@@ -21,11 +21,8 @@ JustInCase.InitialDashboard = M.PageView.design({
     	childViews: 'image',
 
     	image: M.ImageView.design({
-
             anchorLocation: M.CENTER,
-
             value: 'theme/images/banner.png'
-
         }),
         value: ''
     }),

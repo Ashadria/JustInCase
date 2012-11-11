@@ -22,12 +22,12 @@ JustInCase.MapPage = M.PageView.design({
             showStreetViewControl: NO,
             showNavigationControl: YES,
             mapType: M.MAP_ROADMAP,
-            zoomLevel: 10,
+            zoomLevel: 15,
             isDraggable: YES,
 
             initialLocation: M.Location.extend({
-                latitude: 39.073791,
-                longitude: -95.471191
+                latitude: 39.114171,
+                longitude: -94.627457
             }),
             callbacks: {
                 error: {

@@ -15,8 +15,8 @@ JustInCase.MapController = M.Controller.extend({
                             /* google namespace is loaded, so use places now */
                             var service = new google.maps.places.PlacesService(map.map);
                             var request = {
-                                location: new google.maps.LatLng(39.073791, -95.471191),
-                                radius: '100',
+                                location: new google.maps.LatLng(39.114171, -94.627457),
+                                radius: '20',
                                 types: ['store']
                             };
 
@@ -40,8 +40,8 @@ JustInCase.MapController = M.Controller.extend({
             });
         } else {
         	M.ViewManager.getView('map', 'map').updateMap({
-                initialLocation: M.Location.init(39.073791, -95.471191),
-                zoomLevel: 10,
+                initialLocation: M.Location.init(39.114171, -94.627457),
+                zoomLevel: 15,
                 setMarkerAtInitialLocation: NO
             });
         	JustInCase.MapController.findDoctorLocation();
@@ -50,18 +50,35 @@ JustInCase.MapController = M.Controller.extend({
     },
 
     findDoctorLocation: function() {
-    	var map = M.ViewManager.getView('map', 'map');
+    	M.LocationManager.getLocationByAddress(this, this.onSuccessDoc, this.onErrorDoc, doctorAddress);
+    },
 
-        //Get doctors location
-        var doctorMarker = M.MapMarkerView.init({
-            location: M.Location.init(39.073791, -95.471191),
+
+    onSuccessDoc: function(location) {
+        M.LoaderView.hide();
+
+        var map = M.ViewManager.getView('map', 'map');
+
+        var userMarker = M.MapMarkerView.init({
+            location: location,
             markerAnimationType: M.MAP_MARKER_ANIMATION_DROP,
             showAnnotationOnClick: YES,
             map: map,
             title: '' + doctorName,
             message: '' + doctorAddress
         });
-        map.addMarker(doctorMarker);
+
+        map.addMarker(userMarker);
+
+    },
+
+    onErrorDoc: function(error) {
+        M.LoaderView.hide();
+
+        M.DialogView.alert({
+            title: 'Error: ' + error,
+            message: 'An error occured while trying to find doctors location. Please check your service and try again later.'
+        });
     },
 
     findUserLocation: function() {

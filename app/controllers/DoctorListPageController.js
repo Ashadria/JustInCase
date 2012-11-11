@@ -23,17 +23,104 @@ JustInCase.DoctorListPageController = M.Controller.extend({
 	},
 
 	getProviders : function(zipcode, specialty){
-		//Make request for Family Medicine Doctors
-		return [
-		        {
-		        	name: 'Dr Smith ',
-		        	address: '2301 East Lamar Blvd. Suite 140. City, Arlington'
-		        },
-		        {
-		        	name: 'Dr Brown ',
-		        	address: '5000 Clinton Parkway Lawrence, Kansas'
-		        }
-	    ];
+		switch(specialty){
+			case "Family Medicine":
+				return [
+				        {
+				        	name: 'Simanovsky, Michael',
+				        	address: '9150 E 41st Ter Kansas City, MO 64133'
+				        },
+				        {
+				        	name: 'Colliton, William',
+				        	address: '2301 Holmes St Primary Office Ste 350456 Kansas City, MO 64108'
+				        },
+				        {
+				        	name: 'Barnett, Angela',
+				        	address: '2301 Holmes St Ste 800 Kansas City, MO 64108'
+				        },
+				        {
+				        	name: 'Voss, Laura',
+				        	address: '2301 Holmes St Ste 800 Kansas City, MO 64108'
+				        },
+				        {
+				        	name: 'Kaiser, Scott',
+				        	address: '2300 Main St Ste 910 Kansas City, MO 64108'
+				        },
+				        {
+				        	name: 'Dasta, Susan',
+				        	address: '304 Delaware St Kansas City, MO 64105'
+				        },
+				        {
+				        	name: 'Mesa, Stephen',
+				        	address: '4419 S Crysler Ave Primary Office Ste 082084 Independence, MO 64055'
+				        },
+				        {
+				        	name: 'Brown, Robert',
+				        	address: '2025 Swift Ave North Kansas City, MO 64116'
+				        },
+				        {
+				        	name: 'Wright, Gill',
+				        	address: '2025 Swift Ave North Kansas City, MO 64116'
+				        },
+				        {
+				        	name: 'Bybee, Kevin',
+				        	address: '4330 Wornall Rd Ste 2000 Kansas City, MO 64111'
+				        },
+				        {
+				        	name: 'Weaver, Marsha',
+				        	address: '4323 Wornall Rd Peet Ctr Kansas City, MO 64111'
+				        },
+				        {
+				        	name: 'Williams, Linnea',
+				        	address: '4620 J C Nichols Pky Ste 405 Kansas City, MO 64112'
+				        }
+			    ];
+			case "Emergency Medicine":
+				return [
+				        {
+				        	name: 'Voss, Laura',
+				        	address: '2301 Holmes St Primary Office Ste 350456 Kansas City, MO 64108'
+				        },
+				        {
+				        	name: 'Thomas, Kenneth',
+				        	address: '2301 Holmes St Ste 800 Kansas City, MO 64108'
+				        },
+				        {
+				        	name: 'Kaiser, Scott',
+				        	address: '2300 Main St Ste 910 Kansas City, MO 64108'
+				        },
+				        {
+				        	name: 'Bybee, Kevin',
+				        	address: '4330 Wornall Rd Ste 2000 Kansas City, MO 64111'
+				        },
+				        {
+				        	name: 'Williams, Linnea',
+				        	address: '4620 J C Nichols Pky Ste 405 Kansas City, MO 64112'
+				        }
+			    ];
+			case "Pediatrics":
+				return [
+				        {
+				        	name: 'Colliton, William',
+				        	address: '2301 Holmes St Primary Office Ste 350456 Kansas City, MO 64108'
+				        },
+				        {
+				        	name: 'Thomas, Kenneth',
+				        	address: '2301 Holmes St Ste 800 Kansas City, MO 64108'
+				        }
+			    ];
+			case "Chiropractic Medicine":
+				return [
+				        {
+				        	name: '',
+				        	address: ''
+				        },
+				        {
+				        	name: '',
+				        	address: ''
+				        }
+			    ];
+		}
 	},
 
 	listObjectClicked : function(id, nameId){

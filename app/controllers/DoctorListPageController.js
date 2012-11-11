@@ -27,8 +27,16 @@ JustInCase.DoctorListPageController = M.Controller.extend({
 			case "Family Medicine":
 				return [
 				        {
-				        	name: 'Simanovsky, Michael',
-				        	address: '9150 E 41st Ter Kansas City, MO 64133'
+				        	name: 'Weaver, Marsha',
+				        	address: '4323 Wornall Rd Peet Ctr Kansas City, MO 64111'
+				        },
+				        {
+				        	name: 'Williams, Linnea',
+				        	address: '4620 J C Nichols Pky Ste 405 Kansas City, MO 64112'
+				        },
+				        {
+				        	name: 'Bybee, Kevin',
+				        	address: '4330 Wornall Rd Ste 2000 Kansas City, MO 64111'
 				        },
 				        {
 				        	name: 'Colliton, William',
@@ -51,32 +59,28 @@ JustInCase.DoctorListPageController = M.Controller.extend({
 				        	address: '304 Delaware St Kansas City, MO 64105'
 				        },
 				        {
-				        	name: 'Mesa, Stephen',
-				        	address: '4419 S Crysler Ave Primary Office Ste 082084 Independence, MO 64055'
-				        },
-				        {
-				        	name: 'Brown, Robert',
-				        	address: '2025 Swift Ave North Kansas City, MO 64116'
+				        	name: 'Simanovsky, Michael',
+				        	address: '9150 E 41st Ter Kansas City, MO 64133'
 				        },
 				        {
 				        	name: 'Wright, Gill',
 				        	address: '2025 Swift Ave North Kansas City, MO 64116'
 				        },
 				        {
-				        	name: 'Bybee, Kevin',
-				        	address: '4330 Wornall Rd Ste 2000 Kansas City, MO 64111'
+				        	name: 'Brown, Robert',
+				        	address: '2025 Swift Ave North Kansas City, MO 64116'
 				        },
 				        {
-				        	name: 'Weaver, Marsha',
-				        	address: '4323 Wornall Rd Peet Ctr Kansas City, MO 64111'
-				        },
-				        {
-				        	name: 'Williams, Linnea',
-				        	address: '4620 J C Nichols Pky Ste 405 Kansas City, MO 64112'
+				        	name: 'Mesa, Stephen',
+				        	address: '4419 S Crysler Ave Primary Office Ste 082084 Independence, MO 64055'
 				        }
 			    ];
 			case "Emergency Medicine":
 				return [
+				        {
+				        	name: 'Bybee, Kevin',
+				        	address: '4330 Wornall Rd Ste 2000 Kansas City, MO 64111'
+				        },
 				        {
 				        	name: 'Voss, Laura',
 				        	address: '2301 Holmes St Primary Office Ste 350456 Kansas City, MO 64108'
@@ -88,10 +92,6 @@ JustInCase.DoctorListPageController = M.Controller.extend({
 				        {
 				        	name: 'Kaiser, Scott',
 				        	address: '2300 Main St Ste 910 Kansas City, MO 64108'
-				        },
-				        {
-				        	name: 'Bybee, Kevin',
-				        	address: '4330 Wornall Rd Ste 2000 Kansas City, MO 64111'
 				        },
 				        {
 				        	name: 'Williams, Linnea',
